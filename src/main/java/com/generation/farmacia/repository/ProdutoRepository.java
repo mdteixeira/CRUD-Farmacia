@@ -12,4 +12,6 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
 	List<Produto> findAllByNomeContainingIgnoreCase(@Param("nome") String nome);
 	
 	List<Produto> findAllByPrecoGreaterThan(@Param("preco") float preco);
+	
+	List<Produto> findAllByPrecoLessThan(@Param("preco") float preco);
 }

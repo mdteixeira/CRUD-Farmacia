@@ -61,6 +61,12 @@ public class ProdutoController {
 		return ResponseEntity.ok(produtoRepository.findAllByPrecoGreaterThan(preco));
 	}
 
+	// filtrar por preço (maior que)
+	@GetMapping("/menor/{preco}")
+	public ResponseEntity<List<Produto>> getMenorQue(@PathVariable float preco) {
+		return ResponseEntity.ok(produtoRepository.findAllByPrecoLessThan(preco));
+	}
+
 	// post --> envia um post para o server a partir do body
 	@PostMapping
 	public ResponseEntity<Produto> post(@Valid @RequestBody Produto produto) {

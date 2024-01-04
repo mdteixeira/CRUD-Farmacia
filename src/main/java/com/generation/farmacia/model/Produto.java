@@ -21,7 +21,7 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // define o Auto_Increment
 	private Long id;
 
-	@Size(max = 100, message = "O nome não pode ter mais de 500 caracteres.")
+	@Size(max = 100, message = "O nome não pode ter mais de 100 caracteres.")
 	@NotBlank(message = "O nome é obrigatório!") // não deixa ser vazio
 	@Column(length = 100)
 	private String nome;
